@@ -1,12 +1,13 @@
+---
 apiVersion: tekton.dev/v1beta1
-  kind: Task
+kind: Task
 metadata:
   name: cleanup
 spec:
   description: This task will clean up workspaces by deleting all the files.
   workspaces:
-    - name:source
-  steps: 
+    - name: source
+  steps:
     - name: remove
       image: alpine:3
       env:
